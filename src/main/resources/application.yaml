@@ -1,0 +1,8 @@
+server:
+  port: 9024
+  compression:
+    enabled: true
+    mime-types: 'application/json'
+
+logging:
+  level: INFO
