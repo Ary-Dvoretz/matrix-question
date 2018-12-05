@@ -13,8 +13,8 @@ public class MatrixTest {
     public void setup() {
         Character start = 'A';
         matrix = new Matrix(5, 4);
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < matrix.getRowsLimit(); i++) {
+            for (int j = 0; j < matrix.getColsLimit(); j++) {
                 matrix.setDataAt(start++, i, j);
             }
         }
@@ -69,7 +69,7 @@ public class MatrixTest {
     @Test
     public void checkPutWhileRotated90() {
         matrix.rotateClockwise();
-        for (int i = 0; i < 4; i ++) {
+        for (int i = 0; i < matrix.getRowsLimit(); i ++) {
             matrix.setDataAt((char) ('W' + i), i,2);
         }
         String x = matrix.toString();

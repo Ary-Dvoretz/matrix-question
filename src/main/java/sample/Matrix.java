@@ -34,14 +34,6 @@ public class Matrix {
         return result.toString();
     }
 
-    private int getRowsLimit() {
-        return getLimit(false);
-    }
-
-    private int getColsLimit() {
-        return getLimit(true);
-    }
-
     private int getLimit(boolean colums) {
         switch (angle) {
             case _0:
@@ -67,6 +59,14 @@ public class Matrix {
                 return new Pair<>(j,dataY-1-i);
         }
         throw new IllegalStateException("not supported angle");
+    }
+
+    public int getRowsLimit() {
+        return getLimit(false);
+    }
+
+    public int getColsLimit() {
+        return getLimit(true);
     }
 
     public Character getDataAt(int i, int j) {
